@@ -1,93 +1,50 @@
-import re
+#!/usr/bin/env python
+
+from bs4 import BeautifulSoup
 
 
-def getTag (line, startFrom = 0):
-    mode = 0
+
+class HtmlStruct:
+
+    def __init__(self):
+        self.structNoAtt = []
     
-    result = ""
-    for c in line[startFrom:]:
-        
-        #prije "<"
-        if mode == 0:
-            if c == "<":
-                mode = 1
-                result += c
-                continue
-            else:
-                continue
-        
-        #poslije "<" moze doci "/"
-        if mode == 1:
-            if c == " ":
-                mode = 0
-                result = ""
-                continue
-            if c == "/":
-                mode = 4
-                result += c
-                continue
-            else:
-                mode = 2
-                result += c
-                continue
+    def parseHtml(self, htmlString):
+        self.soup = BeautifulSoup(htmlString, 'html.parser')
+        self.__recursion(self.getAll().html)
 
-        #poslije "/"
-        if mode == 4:
-            if c == " ":
-                continue
-            else:
-                mode = 2
-                result += c
-                continue
-        
-        #parsiranje imena elementa
-        elif mode == 2:
-            if c == ">":
-                result += c
-                break
-            elif c != " ":
-                result += c
-                continue
-            else:
-                mode = 3
-                continue
-
-        #parsiranje do ">"
-        elif mode == 3:
-            if c != ">":
-                continue
-            else:
-                #print ("over: " + result + " + " + c)
-                result += c
-                break
     
-    return result
+    def getAll(self):
+        return self.soup
 
+    def __recursion(self, tag, depth=0, spacesMultiplier = 2):
+        if tag.name:
+            spaces = ""
+            for x in range(depth * spacesMultiplier):
+                spaces += " "
+            self.structNoAtt.append(spaces + "<" + tag.name + ">")
+            for child in tag.children:
+                self.__recursion(child, depth + 1)
+            self.structNoAtt.append(spaces + "</" + tag.name + ">")
 
-#main
-#print (getTag ("<a      >", 0))
-#print (getTag ("</    a  >", 0))
-#print (getTag ("<a> </a>", 0))
+    def getStruc(self):
+        return self.structNoAtt
 
-tag_re = re.compile("<(/{1})?( )*[^>]*()*>", re.IGNORECASE)
-
-alltags = []
-
-for line in open("test.html", 'r'):
+    def getStrucAsStr(self):
+        result = ""
+        for line in self.structNoAtt:
+            result += line
+            result += "\n"
+        return result[:-1]
     
-    tags = []
-    
-    while line:
-        tag = getTag(line)
-        if tag == "":
-            break
-        tags.append(tag)
-        m = tag_re.search(line)
-        if m.end() < len(line):
-            line = line[m.end():]
-        else:
-            break
-    
-    alltags.append(tags)
 
-print (alltags)
+    
+
+
+f_string = open('test.html').read()
+
+o = HtmlStruct()
+o.parseHtml(f_string)
+
+print (o.getStrucAsStr())
+
