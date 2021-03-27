@@ -38,13 +38,12 @@ class HtmlStruct:
         return result[:-1]
     
 
-    
+if __name__ == '__main__':
 
+    f_string = open('test.html').read()
 
-f_string = open('test.html').read()
+    o = HtmlStruct()
+    o.parseHtml(f_string)
 
-o = HtmlStruct()
-o.parseHtml(f_string)
-
-print (o.getStrucAsStr())
+    print (o.getStrucAsStr())
 
