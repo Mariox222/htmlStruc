@@ -15,7 +15,7 @@ h1 = Simhash(str1)
 h2 = Simhash(str2)
 
 print ("hash for " + str1 + " : ")
-print(h1.value)
+print("h1.value")
 print ("hash for " + str2 + " : ")
 print(h2.value)
 
