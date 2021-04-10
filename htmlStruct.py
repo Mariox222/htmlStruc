@@ -6,84 +6,97 @@ from simhash import Simhash
 
 class HtmlStruct:
 
-    def __init__(self, html):
+    def __init__(self):
         self.structNoAtt = []
-        self.originalDoc = html
+        self.originalDoc = None
+        self.soup = None
     
-    def parseHtml(self, htmlString, leadingSpaces=False, spacesMultiplier=2):
+    def parseHtml(self, htmlString, leadingSpaces=False, spacesMultiplier=2, keepAttributes=False):
+        self.originalDoc = htmlString
         self.soup = BeautifulSoup(htmlString, 'html5lib')
         self.structNoAtt = []
-        self.__recursion(self.getAll().html, leadingSpaces=leadingSpaces, spacesMultiplier=spacesMultiplier)
+        self.__recursion(self.getAll().html, leadingSpaces=leadingSpaces, spacesMultiplier=spacesMultiplier, keepAttributes=keepAttributes)
 
-    
     def getAll(self):
         return self.soup
 
-    def __recursion(self, tag, depth=0, spacesMultiplier = 2, leadingSpaces=False):
+    def __recursion(self, tag, depth=0, spacesMultiplier = 2, leadingSpaces=False, keepAttributes=False):
         if tag.name:
             spaces = ""
-            
             if leadingSpaces:
                 for x in range(depth * spacesMultiplier):
                     spaces += " "
-            self.structNoAtt.append(spaces + "<" + tag.name + ">")
+            
+            attributes = ""
+            if keepAttributes:
+                for att in sorted(tag.attrs):
+                    extra = ""
+                    if tag.attrs[att] != '':
+                        extra = "=\"\""
+                    attributes += " " + att + extra
+            
+            self.structNoAtt.append(spaces + "<" + tag.name + attributes +">")
+            
             for child in tag.children:
-                self.__recursion(child, depth + 1, leadingSpaces=leadingSpaces)
+                self.__recursion(child, depth + 1, leadingSpaces=leadingSpaces, keepAttributes=keepAttributes)
             self.structNoAtt.append(spaces + "</" + tag.name + ">")
 
     def getStruc(self):
         return self.structNoAtt
 
-    def getStrucBeautify(self, spacesMultiplier=2):
-        self.parseHtml(self.originalDoc, leadingSpaces=True, spacesMultiplier=spacesMultiplier)
-        result = ""
-        for line in self.structNoAtt:
-            result += line
-            result += "\n"
-        return result[:-1]
+    def getStrucBeautify(self):
+        if self.soup != None:
+            result = ""
+            for line in self.structNoAtt:
+                result += line
+                result += "\n"
+            return result[:-1]
+        else:
+            return None
 
     def getStrucAsStr(self):
-        self.parseHtml(self.originalDoc, leadingSpaces=False)
-        result = ""
-        for line in self.structNoAtt:
-            result += line.lstrip() + " "
-        return result[:-1]
+        if self.soup != None:
+            result = ""
+            for line in self.structNoAtt:
+                result += line.lstrip() + " "
+            return result[:-1]
+        else:
+            return None
     
-    def getHash(self, simHash=False, hashStructureOnly=True, hexDigest=True):
+    def getHash(self, simHash=False, hashStructureOnly=True):
         toHash = ""
         if hashStructureOnly:
             toHash = self.getStrucAsStr()
         else:
             toHash = self.originalDoc
         
+        if toHash == None:
+            return None
+
         if simHash:
-            sh = Simhash(toHash)
-            return sh.value
+            return Simhash(toHash)
         else:
-            hash_object = SHA256.new(toHash.encode())
-            if hexDigest:    
-                return hash_object.hexdigest()
-            else:
-                return hash_object.digest()
+            return SHA256.new(toHash.encode())
         
 
 
 if __name__ == '__main__':
 
-    f_string = open('test3.html').read()
+    f_string = open('test.html').read()
 
-    o = HtmlStruct(f_string)
-    
+    o = HtmlStruct()
 
-    print (o.getStrucBeautify(spacesMultiplier=4))
+    o.parseHtml(f_string, keepAttributes=True)
+
+    #print (o.getStrucBeautify())
     print (o.getStrucAsStr())
 
-    print("Crypto hash of original is:  " + str(o.getHash(simHash=False, hashStructureOnly=False, hexDigest=True)))
-    print("Crypto hash of structure is: " + str(o.getHash(simHash=False, hashStructureOnly=True, hexDigest=True)))
+    #print("Crypto hash of original is:  " + o.getHash(simHash=False, hashStructureOnly=False).hexdigest())
+    #print("Crypto hash of structure is: " + o.getHash(simHash=False, hashStructureOnly=True).hexdigest())
 
-    print("sim hash of original is:  " + str(o.getHash(simHash=True, hashStructureOnly=False)))
-    print("sim hash of structure is: " + str(o.getHash(simHash=True, hashStructureOnly=True)))
+    #print("sim hash of original is:  " + str(o.getHash(simHash=True, hashStructureOnly=False).value))
+    #print("sim hash of structure is: " + str(o.getHash(simHash=True, hashStructureOnly=True).value))
+
 
     
-
 

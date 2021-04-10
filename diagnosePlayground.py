@@ -1,5 +1,7 @@
 from bs4.diagnose import diagnose
 
+
+
 testStrings = [
     "<a><b></b></a>",
     "<a><b></b>    ",
