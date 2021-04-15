@@ -84,18 +84,23 @@ if __name__ == '__main__':
 
     f_string = open('test.html').read()
 
-    o = HtmlStruct()
+    o1 = HtmlStruct()
+    o2 = HtmlStruct()
 
-    o.parseHtml(f_string, keepAttributes=True)
+    o1.parseHtml(f_string, keepAttributes=False)
+    o2.parseHtml(f_string, keepAttributes=True)
+    
+    print (o1.getStrucAsStr())
+    print (o2.getStrucAsStr())
 
-    #print (o.getStrucBeautify())
-    print (o.getStrucAsStr())
+    s1 = o1.getHash(simHash=True, hashStructureOnly=True)
+    s2 = o2.getHash(simHash=True, hashStructureOnly=True)
+    
+    print("simhash1: " + str(s1.value))
+    print("simhash2: " + str(s2.value))
 
-    #print("Crypto hash of original is:  " + o.getHash(simHash=False, hashStructureOnly=False).hexdigest())
-    #print("Crypto hash of structure is: " + o.getHash(simHash=False, hashStructureOnly=True).hexdigest())
-
-    #print("sim hash of original is:  " + str(o.getHash(simHash=True, hashStructureOnly=False).value))
-    #print("sim hash of structure is: " + str(o.getHash(simHash=True, hashStructureOnly=True).value))
+    print("sim hash distance:  " + str(s1.distance(s2)))
+    
 
 
     
