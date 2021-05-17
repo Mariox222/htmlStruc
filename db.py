@@ -141,9 +141,9 @@ class Experimenter:
 def makeHashFile():
     batch_size = 10
     sleepInterval = 5
-    num_of_hash_pairs_to_get = None
-    docs_from = 200
-    docs_to = 1000
+    num_of_hash_pairs_to_get = None # ako je None, broj dokumenata je jednak docs_to - docs_from
+    docs_from = 200 # od koje pozicije pocinje dohvacati linkove
+    docs_to = 1000 # do koje pozicije pocinje dohvacati, ako je None, trazi se do kraja kolekcije
 
     json_filename = 'hash_pairs.json'
     conn_str = "mongodb://rouser:MiLaBiLaFiLa123@127.0.0.1:27017/websecradar?authSource=websecradar"
