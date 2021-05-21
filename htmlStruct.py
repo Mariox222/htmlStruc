@@ -196,7 +196,7 @@ class HtmlStruct:
             raise Exception("structDiff(), must parse a document first")
 
     @staticmethod
-    def presentNodes(nodes, spacesMultiplier=2):
+    def presentNodes(nodes, spacesMultiplier=2, addNewLines=True):
         # find min depth first
         minDepth = None
         for node in nodes:
@@ -213,7 +213,11 @@ class HtmlStruct:
             for att in node.attributes:
                 name = name + " " + att + "=\"\""
             name = "<" + name + ">"
-            result = result + spaces + name + "\n"
+            
+            newLine = "\n" if addNewLines else ""
+            spaces = spaces if spaces != "" else " "
+
+            result = result + spaces + name + newLine
         
         return result 
 

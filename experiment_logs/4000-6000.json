@@ -1,0 +1,428 @@
+[
+    {
+        "dirname": 274,
+        "stats": {
+            "second_last_hash": "239314507ccdc2fb7614bc7c2c4a404ce2228aa3478450e95784002e635013df",
+            "last_hash": "2d5f7f551cca52ad439af9e3f54b7103ad31587084ad121361d8e319210b9f5d",
+            "url": "http://lab.nsk.hr/wp-content/themes/uncode/library/js/init.js"
+        },
+        "injected_structures": [
+            " <span> </span> <span> </span>",
+            " <a.length> </a.length>"
+        ]
+    },
+    {
+        "dirname": 279,
+        "stats": {
+            "second_last_hash": "123cf295f857bc901e4799a116aac4a4e2cf802828696bffe48ec124dcb0506f",
+            "last_hash": "db1d127b96c93f442210aa22bfdb9eb95f7bf70803c24f5ef9e85aea5c4fb1c6",
+            "url": "http://draz.adresa.com.hr"
+        },
+        "injected_structures": [
+            " <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br>"
+        ]
+    },
+    {
+        "dirname": 306,
+        "stats": {
+            "second_last_hash": "2221c946554f9a25a9af4c153dfbba913c3d2f0a26ac2c06dee0df1844e356b0",
+            "last_hash": "b95995887eb45d7ce5e2b1ba7d31162dae8c0027079b42986f7492998986030d",
+            "url": "http://lab.nsk.hr/wp-content/themes/uncode/library/js/app.js"
+        },
+        "injected_structures": [
+            " <div> </div>"
+        ]
+    },
+    {
+        "dirname": 240,
+        "stats": {
+            "second_last_hash": "b5866500ce35d12dd24ad7bc4d1d96762ed895784ad46bae3dcf2715b73b75fa",
+            "last_hash": "bf4bb4285eaec799c159439c987f1e358c2b0d014635922f40172071791da699",
+            "url": "http://www.emat.hr/assets/lib/FlexSlider/flexslider.css"
+        },
+        "injected_structures": [
+            " <head> <title> </title> </head>",
+            " <h1> </h1>",
+            " <a> </a>"
+        ]
+    },
+    {
+        "dirname": 494,
+        "stats": {
+            "second_last_hash": "945d40ba985e75a39bf463cc42b617319ff058f07561a95b963ef2534eb1eb9d",
+            "last_hash": "e62b6f10240b6a420fc1c79b322586540fbac3aa053f242b2638935243b7266b",
+            "url": "http://www.ss-gospodarska-vz.skole.hr"
+        },
+        "injected_structures": [
+            " <a> <img> </img> </a>",
+            " <span> <a> </a> </span> </p> <a> </a> <p> </p> <h2> </h2> <h4> <a> </a> </h4> <p>",
+            " <a> <img> </img> </a>",
+            " </span> </p> <a> </a> <p> </p> <h2> </h2> <h4> <a> </a> </h4> <p> <span>"
+        ]
+    },
+    {
+        "dirname": 392,
+        "stats": {
+            "second_last_hash": "144524233f795d6a425b76f7ae5c0bb622b5f67e2e6ae73532ad526528ca07cf",
+            "last_hash": "40732e9dcfa704cf615e4691bb07aecfd1cc5e063220a46e4a7ff6560c77f5db",
+            "url": "http://www.najbolji.hr/WebResource.axd"
+        },
+        "injected_structures": [
+            " <form> <input> </input> </form>"
+        ]
+    },
+    {
+        "dirname": 220,
+        "stats": {
+            "second_last_hash": "eece6e0c65b7007ab0eb1b4998d36dafe381449525824349128efc3f86f4c91c",
+            "last_hash": "d9f61394cf3a422e6143f13acb93c24eaca33804b59f7f418ccd66f96cf6e452",
+            "url": "http://www.emat.hr/assets/lib/bootstrap/dist/css/bootstrap.min.css"
+        },
+        "injected_structures": [
+            " <head> <title> </title> </head>",
+            " <h1> </h1>",
+            " <a> </a>"
+        ]
+    },
+    {
+        "dirname": 372,
+        "stats": {
+            "second_last_hash": "4ad78ff02567ef9156d9884fe9674507acb9b5d4b806db840088ebab1343aef3",
+            "last_hash": "0c68eeb6017ce31af60b4f13f5d0a411626386f50dbd617232e6c8b9f0bc4e0a",
+            "url": "http://vux-rasvjeta.hr"
+        },
+        "injected_structures": [
+            " <meta> </meta>",
+            " <link> </link> <link> </link> <link> </link> <link> </link> <link> </link> <link> </link>",
+            " <br> </br> <br> </br>"
+        ]
+    },
+    {
+        "dirname": 507,
+        "stats": {
+            "second_last_hash": "75af0ac5411f295f438a31ccb104d633523dcd1162bdecd3badbfde0455ffe67",
+            "last_hash": "3eed8ed5558eec8ca737962d62df335f0b9b441166319bff9bdd65218cec2ab6",
+            "url": "http://pdsusedgrad.hr"
+        },
+        "injected_structures": [
+            " </p> <p> </p> <p>",
+            " <br> </br> <br> </br> <br> </br> <br> </br> <br> </br>",
+            " <p> </p> <p> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> </p> <p> </p> <p> <br> </br> <br> </br> </p> <p> <br> </br> </p> <p> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> </p> <p> <br> </br> </p> <p> <br> </br> <br> </br> <br> </br> </p>",
+            " <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br>",
+            " <div> </div> </div> <div> <div> </div> <h2> </h2> <a> <img> </img> </a>",
+            " </p> <p>"
+        ]
+    },
+    {
+        "dirname": 21,
+        "stats": {
+            "second_last_hash": "c1a3127aa8725c77a5e4eeed94cfac9d1c993fff26b8afaa579ed509ee7036de",
+            "last_hash": "02e6fe81a8cfd4aea404ee3420f229c2160327e44eb82264c3df9d3b1b5ce1fa",
+            "url": "http://gluo.hr/page/2/"
+        },
+        "injected_structures": [
+            " <link> </link>"
+        ]
+    },
+    {
+        "dirname": 207,
+        "stats": {
+            "second_last_hash": "b45c11897101413af6abcc99e2cfcce4731dfe49ead5b890e09673d46f16506a",
+            "last_hash": "0ba2f6756001669bdf934f9d79e8fd1ccf2028130c33a0510279581ec9dfd73a",
+            "url": "http://www.hkis.hr/WebResource.axd"
+        },
+        "injected_structures": [
+            " <form> <input> </input> </form>"
+        ]
+    },
+    {
+        "dirname": 206,
+        "stats": {
+            "second_last_hash": "635efce03d3a45fddbee2faf5c0783e1a9e8662caf2072990478b15f24127ec6",
+            "last_hash": "40732e9dcfa704cf615e4691bb07aecfd1cc5e063220a46e4a7ff6560c77f5db",
+            "url": "http://www.donjimiholjac.oko.hr/WebResource.axd"
+        },
+        "injected_structures": [
+            " <form> <input> </input> </form>"
+        ]
+    },
+    {
+        "dirname": 164,
+        "stats": {
+            "second_last_hash": "6dd1ebdb17287a1d364138bbb63ed4fcd7d6a6f29aa4ba5a600ef6bd96cfcea3",
+            "last_hash": "d84f28beabc6360486a0efeadc557081b25eaf615d3d9c7ac4b41bc461c5e6c5",
+            "url": "http://www.beneteau-croatia.hr"
+        },
+        "injected_structures": [
+            " <li> <a> <div> </div> </a> </li>",
+            " <li> <a> <div> </div> </a> </li> <li> <a> <div> </div> </a> </li>"
+        ]
+    },
+    {
+        "dirname": 231,
+        "stats": {
+            "second_last_hash": "3a88d8ce9b78656c929e74b7e593a139b889ea12533a97d70b9c7bbe8fd588f4",
+            "last_hash": "e3e5eb78da1b63521900f26ed58fff3581fa770222e4c70cf1ed39b97cbc389e",
+            "url": "http://www.emat.hr/assets/extras/rotating-carousel/css/style.css"
+        },
+        "injected_structures": [
+            " <head> <title> </title> </head>",
+            " <h1> </h1>",
+            " <a> </a>"
+        ]
+    },
+    {
+        "dirname": 41,
+        "stats": {
+            "second_last_hash": "2b4e0fc74b916486e0547c24312bd0e624f841f801c52b7d80bd5c1c039ed5c0",
+            "last_hash": "83ea72258a87a71a83c0636c975cfcc98f65539c60483e550727b255b3e5b2e0",
+            "url": "http://www.os-bobota.skole.hr/rss/rssfeeder.php"
+        },
+        "injected_structures": [
+            " <br> </br> <p> <br> </br> <br> </br> <br> </br> </p> </description> <pubdate> </pubdate> </item> <item> <title> </title> <link> </link> <description>"
+        ]
+    },
+    {
+        "dirname": 76,
+        "stats": {
+            "second_last_hash": "041b8ac864647e3a5743ba01db83069fa9c14a380e413478a093fcf91d015bd9",
+            "last_hash": "437b8e6b1d5f79a28da84beff4eb44e2d15b15ce98291c0c664ef0f3cb366e09",
+            "url": "http://wline.hr"
+        },
+        "injected_structures": [
+            " <td> </td> <td> <a> </a> </td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td> </td> <td> <a> </a> </td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td> </td> <td> <a> </a> </td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td> </td> <td> <a> </a> </td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td> </td> <td> <a> </a> </td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td> </td> <td> <a> </a> </td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td> </td> <td> <a> </a> </td> <td> </td> <td> </td> <td> </td> </tr> <tr>"
+        ]
+    },
+    {
+        "dirname": 214,
+        "stats": {
+            "second_last_hash": "0cc384e356a711c2760264b861285e353c2e205efe77f1cf94974a066ea8dc45",
+            "last_hash": "4c9adbec1754bc5eebbbaabb3785ccdd03681524a07bc97dac75caeee9691e83",
+            "url": "http://www.emat.hr/assets/extras/scrollspeed/jQuery.scrollSpeed.js"
+        },
+        "injected_structures": [
+            " <head> <title> </title> </head>",
+            " <h1> </h1>",
+            " <a> </a>"
+        ]
+    },
+    {
+        "dirname": 227,
+        "stats": {
+            "second_last_hash": "936ffccdc35bc55221e669d0e76034af76ba8c080c1b1149144dbbd3b5311829",
+            "last_hash": "0eb22cb71a59e0c17eb27bfa06972577f8e5aceabd48b2615374997d8485eea2",
+            "url": "http://www.emat.hr/assets/lib/fontawesome/css/font-awesome.min.css"
+        },
+        "injected_structures": [
+            " <head> <title> </title> </head>",
+            " <h1> </h1>",
+            " <a> </a>"
+        ]
+    },
+    {
+        "dirname": 87,
+        "stats": {
+            "second_last_hash": "ceb271ac9cdfa66ba6844693cd8f5dc8a00d730dbb5ec5783d80fbd06dee9496",
+            "last_hash": "f85564e81b61fe0a632d28ece1e7656e9dc723a203a9c40d4dfa193df39d166c",
+            "url": "http://hzf.hr"
+        },
+        "injected_structures": [
+            " <div> <div> <img> </img> </div> <div> <strong> </strong> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> </div> </div> </div> <hr> </hr> <div>"
+        ]
+    },
+    {
+        "dirname": 223,
+        "stats": {
+            "second_last_hash": "4ce6c6373058570d1d1f18a0f917739319b104969a0ca4e3a5998b1288b3d3ec",
+            "last_hash": "cb3b9a4e2cbf5c1627c658c0119b8d2b4fa75c1b196fabb86af4a97fe5854220",
+            "url": "http://www.emat.hr/assets/lib/owlcarousel/owl-carousel/owl.theme.css"
+        },
+        "injected_structures": [
+            " <head> <title> </title> </head>",
+            " <h1> </h1>",
+            " <a> </a>"
+        ]
+    },
+    {
+        "dirname": 217,
+        "stats": {
+            "second_last_hash": "b250a929dc8385c544fcfa4a36b6507cb42117c097a6b467f725ce8905b4ba35",
+            "last_hash": "8860de18a13d893f26ad2396b95c4b1abf695831cf79ed6dd2e30a9a08e5598a",
+            "url": "http://www.emat.hr/assets/lib/waypoints/lib/shortcuts/inview.min.js"
+        },
+        "injected_structures": [
+            " <head> <title> </title> </head>",
+            " <h1> </h1>",
+            " <a> </a>"
+        ]
+    },
+    {
+        "dirname": 241,
+        "stats": {
+            "second_last_hash": "6d3c17609853334a349d9629efe35d9cc326811698388de93be7016d81b5fdd4",
+            "last_hash": "2e89d3f2fbb854767bec25d7cb8888914e3200a1ec991a3f61089f1aee37b7ee",
+            "url": "http://www.emat.hr/assets/css/main.css"
+        },
+        "injected_structures": [
+            " <head> <title> </title> </head>",
+            " <h1> </h1>",
+            " <a> </a>"
+        ]
+    },
+    {
+        "dirname": 36,
+        "stats": {
+            "second_last_hash": "fbd5b8255a99afe96e89a88423275ed4e93083fad3311dd349906122e63206a0",
+            "last_hash": "296d330db81c409849a2268543a966e2daddd555c4d1ba852fb36ef168357bed",
+            "url": "http://newton.fizika.unios.hr/theme/yui_combo.php"
+        },
+        "injected_structures": [
+            " <r> <a> <i.length> <s.length> <s> <r> <t> <s> <o> <u> <i> <u> <s> <r.length> <r.length> <p> <t.length> <l> <r.length> <y> <y> <r.length> <s> <option> </option> <option> </option> <tbody> <s> <tbody> </tbody> <tr> </tr> <script> </script> <select> <option> </option> </select> <tbody> </tbody> <tr> </tr> <colgroup> </colgroup> <a> <o> <div> </div> <div> </div> <s> <a.length> <u> <r> <i> <u> <a> </a> <a> </a> <a> <p> </p> <p> <s> <f> <a> </a> <a> <o> <n> <div> </div> <div> </div> <div> </div> <c> <iframe> </iframe> <a> <o> <a> </a> <a> <s.length> <span> </span> <a> <div> </div> </a> <a> <button> </button> <t.expires> <r-1> </r-1> <img> </img> <div> </div> <div> </div> <a> </a> <img> </img> <input> </input> <div> </div> <div> <div> </div> <div> </div> <div> </div> <div> </div> <this.get> </this.get> </div> </t.expires> </a> </s.length> </a> </o> </a> </c> </n> </o> </a> </f> </s> </p> </a> </u> </i> </r> </u> </a.length> </s> </o> </a> </s> </tbody> </s> </r.length> </y> </y> </r.length> </l> </t.length> </p> </r.length> </r.length> </s> </u> </i> </u> </o> </s> </t> </r> </s> </s.length> </i.length> </a> </r>"
+        ]
+    },
+    {
+        "dirname": 26,
+        "stats": {
+            "second_last_hash": "87b6920dd445412ad439fe78d23307805ebda1044e7b92eaa13a2db533355f23",
+            "last_hash": "7e20288012d29d422df063a0658671d6be7c661b58a9c464419b1525eed1f355",
+            "url": "http://gluo.hr"
+        },
+        "injected_structures": [
+            " <link> </link>"
+        ]
+    },
+    {
+        "dirname": 205,
+        "stats": {
+            "second_last_hash": "d24161ea626a29de1cb2d3f4aab3699e30b8f893706468e5d9db3a192cbff259",
+            "last_hash": "eff3f03f1711bc28a658fe8f4e334de4c6939fa3c36828c69dcd4ca5cb2a20b6",
+            "url": "http://www.emat.hr/assets/extras/rotating-carousel/js/jquery.gallery.js"
+        },
+        "injected_structures": [
+            " <head> <title> </title> </head>",
+            " <h1> </h1>",
+            " <a> </a>"
+        ]
+    },
+    {
+        "dirname": 68,
+        "stats": {
+            "second_last_hash": "67e0ccf411fd4cecc081438bc52179963704460c5c84d74f4608670268b630b4",
+            "last_hash": "47f8557fb1c9ce3244571fedec23c2e67c3f5cc876b5309c1fffca7023bfd28d",
+            "url": "http://turizam-bilogorabjelovar.com.hr"
+        },
+        "injected_structures": [
+            " <div> <a> <img> </img> <div> </div> </a> </div> <div> <a> <img> </img> <div> </div> </a> </div>"
+        ]
+    },
+    {
+        "dirname": 468,
+        "stats": {
+            "second_last_hash": "8620b8520f53ef56a5f1fafe978aa6b93753dfb0b0ce8298b474b187ba5b7d93",
+            "last_hash": "37a97f8e7ccd3fd87c2f638805974c48de712be5b64a8f822f9d8c7f00b9222a",
+            "url": "http://zzjzpgz.hr"
+        },
+        "injected_structures": [
+            " <li> <a> </a> </li>",
+            " <li> <a> </a> </li>"
+        ]
+    },
+    {
+        "dirname": 233,
+        "stats": {
+            "second_last_hash": "893485d48fc8651981b4810fee0d92ebd7fd85baa7f362ad3934a2c652be8dc9",
+            "last_hash": "efb9c803c725547dec64a5c573340a75d5e2b92cc5bc34e73b240590db3551f1",
+            "url": "http://www.emat.hr/assets/extras/slick/slick.css"
+        },
+        "injected_structures": [
+            " <head> <title> </title> </head>",
+            " <h1> </h1>",
+            " <a> </a>"
+        ]
+    },
+    {
+        "dirname": 466,
+        "stats": {
+            "second_last_hash": "fda251d8108aa422845c828e5ecc45ad964a45428d6d6d115dfa817131bf2ba7",
+            "last_hash": "da2ffe62642d04e51f827ba51b5514ec0d0856cf953da91e6f98d07140c67834",
+            "url": "http://www.minik.hr/wp-includes/js/utils.min.js"
+        },
+        "injected_structures": [
+            " <r> </r>"
+        ]
+    },
+    {
+        "dirname": 230,
+        "stats": {
+            "second_last_hash": "f9d4d7d53c6a764c2e44363d4a5ad8014d1883e443494396aed1e2cb37f5b9e8",
+            "last_hash": "751da9d34b87f09dd2dc4e0ec64da29852420d14fd81c2087158a4dfc69d1020",
+            "url": "http://www.emat.hr/assets/extras/swipebox/css/swipebox.min.css"
+        },
+        "injected_structures": [
+            " <head> <title> </title> </head>",
+            " <h1> </h1>",
+            " <a> </a>"
+        ]
+    },
+    {
+        "dirname": 222,
+        "stats": {
+            "second_last_hash": "16b2d23cb7c601a88e691c164af4f412aa31724b74a54841b19e9f8293bf40c2",
+            "last_hash": "183da6f06b5b8116b9093bf58d4f44c23eef0df458ed0fcadd0420e3d673890f",
+            "url": "http://www.emat.hr/assets/lib/owlcarousel/owl-carousel/owl.carousel.css"
+        },
+        "injected_structures": [
+            " <head> <title> </title> </head>",
+            " <h1> </h1>",
+            " <a> </a>"
+        ]
+    },
+    {
+        "dirname": 69,
+        "stats": {
+            "second_last_hash": "4306d77a97e66ce4636153523f83f594a823cfd3a68acdb675516bdaaafe4866",
+            "last_hash": "67e0ccf411fd4cecc081438bc52179963704460c5c84d74f4608670268b630b4",
+            "url": "http://turizam-bilogorabjelovar.com.hr:8080"
+        },
+        "injected_structures": [
+            " <div> <a> <img> </img> <div> </div> </a> </div>"
+        ]
+    },
+    {
+        "dirname": 239,
+        "stats": {
+            "second_last_hash": "45d1f5f6cf913746c45dd697b1a8f3b719c02d8b3f678dc7fc2766d54e1aaf6e",
+            "last_hash": "aa76359c034856380aa293b79b68da6b7476297d12d5f3cca7968484979cfc4e",
+            "url": "http://www.emat.hr/assets/extras/magnificpopup/magnific-popup.css"
+        },
+        "injected_structures": [
+            " <head> <title> </title> </head>",
+            " <h1> </h1>",
+            " <a> </a>"
+        ]
+    },
+    {
+        "dirname": 226,
+        "stats": {
+            "second_last_hash": "0f7fa0c3a244e21109f699c2b3e0609527d9db21b9805f8919d3c9fefd7cddfa",
+            "last_hash": "31ad2016f40ebfb8f7fd09e3dd9c4da1005d2dc51e9da4bdc49762fdd65e5087",
+            "url": "http://www.emat.hr/assets/lib/ionicons/css/ionicons.css"
+        },
+        "injected_structures": [
+            " <head> <title> </title> </head>",
+            " <h1> </h1>",
+            " <a> </a>"
+        ]
+    },
+    {
+        "dirname": 493,
+        "stats": {
+            "second_last_hash": "4300aeda8d2e3d4c9d7f01ac6473b79cbd15054da514f17f698b60adcaed312d",
+            "last_hash": "0286e0b7f374c449d69fea57fa24c03a93daf762f538368ba6918630f02db2cc",
+            "url": "http://www.ss-gospodarska-vz.skole.hr/rss/rssfeeder.php"
+        },
+        "injected_structures": [
+            " <img> </img> <p> <strong> </strong> </p> <p> </p> <ol> <li> </li> <li> </li> <li> </li> </ol> <p> </p> <p> </p> </description> <pubdate> </pubdate> </item> <item> <title> </title> <link> </link> <description>"
+        ]
+    }
+]

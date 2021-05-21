@@ -7,7 +7,7 @@ import json
 import os
 from htmlStruct import HtmlStruct
 
-
+# ssh -L 27017:127.0.0.1:27017 mbasic@161.53.65.4
 # w5dNm9Lj4zrhOJ8
 
 class Experimenter:
@@ -42,6 +42,8 @@ class Experimenter:
             
             total_document_count += 1
 
+            to_append = dict()
+
             last_hash = ""
             second_last_hash = ""
             for check in reversed(document['checks']):
@@ -57,7 +59,10 @@ class Experimenter:
                 if last_hash == None:
                     print("one site's last check doesn't have a hash")
                 else:
-                    hash_pairs.append({'second_last_hash': second_last_hash, 'last_hash': last_hash})
+                    to_append['second_last_hash'] = second_last_hash
+                    to_append['last_hash'] = last_hash
+                    to_append['url'] = document['url']
+                    hash_pairs.append(to_append)
 
             req_count = req_count - 1
 
@@ -79,6 +84,15 @@ class Experimenter:
         print("Got {} hash pairs".format(len(hash_pairs)))
         print ("writing hash pairs to '{}'".format(filename))
         pprint (hash_pairs)
+
+        old_pairs = list()
+        if os.path.isfile(filename):
+            with open(filename, 'r')as f:
+                old_pairs = json.loads(f.read())
+                
+        for pair in old_pairs:
+            if pair not in hash_pairs:
+                hash_pairs.append(pair)
 
         written = 0
         with open(filename, 'w') as f:
@@ -107,14 +121,15 @@ class Experimenter:
             for pair in data:
                 print (" --- " + str(count) + " / " + str(len(data)))
                 
-                print("sleeping 2 sec")
-                time.sleep(2)
+                print("sleeping 1 sec")
+                time.sleep(1)
 
                 old_doc_doc = doc_col.find_one({"hash": pair['second_last_hash']})
                 new_doc_doc = doc_col.find_one({"hash": pair['last_hash']})
                 
                 if not old_doc_doc or not new_doc_doc:
                     print("couldn't get documents")
+                    count += 1
                     continue
                 
                 old_doc = old_doc_doc['page']
@@ -132,6 +147,11 @@ class Experimenter:
                 with new_doc_path.open(mode="w", encoding="utf-8") as f:
                     f.write(new_doc)
                     print("new document written")
+
+                stats_path = newDir / "stats.json"
+                with stats_path.open(mode="w", encoding="utf-8") as f:
+                    json.dump(pair, f)
+                    print("stats written")
                 
                 count += 1
 
@@ -140,10 +160,10 @@ class Experimenter:
     
 def makeHashFile():
     batch_size = 10
-    sleepInterval = 5
+    sleepInterval = 2
     num_of_hash_pairs_to_get = None # ako je None, broj dokumenata je jednak docs_to - docs_from
-    docs_from = 200 # od koje pozicije pocinje dohvacati linkove
-    docs_to = 1000 # do koje pozicije pocinje dohvacati, ako je None, trazi se do kraja kolekcije
+    docs_from = 4000 # od koje pozicije pocinje dohvacati linkove
+    docs_to = 6000 # do koje pozicije pocinje dohvacati, ako je None, trazi se do kraja kolekcije
 
     json_filename = 'hash_pairs.json'
     conn_str = "mongodb://rouser:MiLaBiLaFiLa123@127.0.0.1:27017/websecradar?authSource=websecradar"
@@ -172,12 +192,18 @@ def checkInjectedStructures():
 
     docs_detected = list() # for printing out
 
+    logs = list()
+
+    subdirs_to_remove = list()
+
     for subdir in dir_path.iterdir():
         
         old_str = ""
         new_str = ""
+        stats = dict()
         
         if subdir.is_dir():
+            subdirs_to_remove.append(subdir)
 
             for file in subdir.iterdir():
                 if file.name == "old.html":
@@ -188,6 +214,10 @@ def checkInjectedStructures():
                     with file.open("r", encoding="utf-8") as f:
                         new_str = f.read()
                         print ("new document readed")
+                if file.name == "stats.json":
+                    with file.open("r", encoding="utf-8") as f:
+                        stats = json.loads(f.read())
+                        print ("stats readed")
         
             old_struc = HtmlStruct()
             new_struc = HtmlStruct()
@@ -206,27 +236,55 @@ def checkInjectedStructures():
                 continue
 
             print(" --- found something")
-
-            json_file = subdir / "inj_struc.json"
             
             l = list()
 
             for insertedStruct in diff:
-                l.append(HtmlStruct.presentNodes(insertedStruct))
+                l.append(HtmlStruct.presentNodes(insertedStruct, spacesMultiplier=0, addNewLines=False))
+            
+            log = {
+                'dirname': subdir.name,
+                'stats': stats,
+                'injected_structures': l
+            }
+            logs.append(log)
 
-            with json_file.open("w", encoding="utf-8") as f:
-                json.dump(l, f)
-                print("writing complete")
-                docs_detected.append(subdir.name)
+        
 
-    pprint(docs_detected)
+    #pprint(docs_detected)
+    pprint(logs)
+
+    print("removing dirs")
+    #pprint(subdirs_to_remove)
+
+    for subdir in subdirs_to_remove:
+        for file in subdir.iterdir():
+            os.remove(file)
+        os.rmdir(subdir)
+
+    logs_path = dir_path / "logs.json"
+    
+    old_logs = list()
+    if os.path.isfile(logs_path):
+        with open(logs_path, 'r')as f:
+            old_logs = json.loads(f.read())
+    
+    for old_log in old_logs:
+        if old_log not in logs:
+            logs.append(old_log)
+
+    with open(logs_path, "w") as f:
+        json.dump(logs, f)
+        print("wrinting logs complete")
+    
+
 
 
 
 
 def main():
-    #makeHashFile()
-    #getDocs()
+    makeHashFile()
+    getDocs()
     checkInjectedStructures()
 
 

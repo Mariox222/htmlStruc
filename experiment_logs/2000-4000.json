@@ -1,0 +1,124 @@
+[
+    {
+        "dirname": 194,
+        "stats": {
+            "second_last_hash": "fda251d8108aa422845c828e5ecc45ad964a45428d6d6d115dfa817131bf2ba7",
+            "last_hash": "da2ffe62642d04e51f827ba51b5514ec0d0856cf953da91e6f98d07140c67834",
+            "url": "http://www.minik.hr/wp-includes/js/utils.min.js"
+        },
+        "injected_structures": [
+            " <r> </r>"
+        ]
+    },
+    {
+        "dirname": 34,
+        "stats": {
+            "second_last_hash": "2221c946554f9a25a9af4c153dfbba913c3d2f0a26ac2c06dee0df1844e356b0",
+            "last_hash": "b95995887eb45d7ce5e2b1ba7d31162dae8c0027079b42986f7492998986030d",
+            "url": "http://lab.nsk.hr/wp-content/themes/uncode/library/js/app.js"
+        },
+        "injected_structures": [
+            " <div> </div>"
+        ]
+    },
+    {
+        "dirname": 196,
+        "stats": {
+            "second_last_hash": "8620b8520f53ef56a5f1fafe978aa6b93753dfb0b0ce8298b474b187ba5b7d93",
+            "last_hash": "37a97f8e7ccd3fd87c2f638805974c48de712be5b64a8f822f9d8c7f00b9222a",
+            "url": "http://zzjzpgz.hr"
+        },
+        "injected_structures": [
+            " <li> <a> </a> </li>",
+            " <li> <a> </a> </li>"
+        ]
+    },
+    {
+        "dirname": 221,
+        "stats": {
+            "second_last_hash": "4300aeda8d2e3d4c9d7f01ac6473b79cbd15054da514f17f698b60adcaed312d",
+            "last_hash": "0286e0b7f374c449d69fea57fa24c03a93daf762f538368ba6918630f02db2cc",
+            "url": "http://www.ss-gospodarska-vz.skole.hr/rss/rssfeeder.php"
+        },
+        "injected_structures": [
+            " <img> </img> <p> <strong> </strong> </p> <p> </p> <ol> <li> </li> <li> </li> <li> </li> </ol> <p> </p> <p> </p> </description> <pubdate> </pubdate> </item> <item> <title> </title> <link> </link> <description>"
+        ]
+    },
+    {
+        "dirname": 120,
+        "stats": {
+            "second_last_hash": "144524233f795d6a425b76f7ae5c0bb622b5f67e2e6ae73532ad526528ca07cf",
+            "last_hash": "40732e9dcfa704cf615e4691bb07aecfd1cc5e063220a46e4a7ff6560c77f5db",
+            "url": "http://www.najbolji.hr/WebResource.axd"
+        },
+        "injected_structures": [
+            " <form> <input> </input> </form>"
+        ]
+    },
+    {
+        "dirname": 235,
+        "stats": {
+            "second_last_hash": "75af0ac5411f295f438a31ccb104d633523dcd1162bdecd3badbfde0455ffe67",
+            "last_hash": "3eed8ed5558eec8ca737962d62df335f0b9b441166319bff9bdd65218cec2ab6",
+            "url": "http://pdsusedgrad.hr"
+        },
+        "injected_structures": [
+            " </p> <p> </p> <p>",
+            " <br> </br> <br> </br> <br> </br> <br> </br> <br> </br>",
+            " <p> </p> <p> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> </p> <p> </p> <p> <br> </br> <br> </br> </p> <p> <br> </br> </p> <p> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> </p> <p> <br> </br> </p> <p> <br> </br> <br> </br> <br> </br> </p>",
+            " <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br>",
+            " <div> </div> </div> <div> <div> </div> <h2> </h2> <a> <img> </img> </a>",
+            " </p> <p>"
+        ]
+    },
+    {
+        "dirname": 2,
+        "stats": {
+            "second_last_hash": "239314507ccdc2fb7614bc7c2c4a404ce2228aa3478450e95784002e635013df",
+            "last_hash": "2d5f7f551cca52ad439af9e3f54b7103ad31587084ad121361d8e319210b9f5d",
+            "url": "http://lab.nsk.hr/wp-content/themes/uncode/library/js/init.js"
+        },
+        "injected_structures": [
+            " <span> </span> <span> </span>",
+            " <a.length> </a.length>"
+        ]
+    },
+    {
+        "dirname": 7,
+        "stats": {
+            "second_last_hash": "123cf295f857bc901e4799a116aac4a4e2cf802828696bffe48ec124dcb0506f",
+            "last_hash": "db1d127b96c93f442210aa22bfdb9eb95f7bf70803c24f5ef9e85aea5c4fb1c6",
+            "url": "http://draz.adresa.com.hr"
+        },
+        "injected_structures": [
+            " <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br> <a> </a> <br> </br>"
+        ]
+    },
+    {
+        "dirname": 222,
+        "stats": {
+            "second_last_hash": "945d40ba985e75a39bf463cc42b617319ff058f07561a95b963ef2534eb1eb9d",
+            "last_hash": "e62b6f10240b6a420fc1c79b322586540fbac3aa053f242b2638935243b7266b",
+            "url": "http://www.ss-gospodarska-vz.skole.hr"
+        },
+        "injected_structures": [
+            " <a> <img> </img> </a>",
+            " <span> <a> </a> </span> </p> <a> </a> <p> </p> <h2> </h2> <h4> <a> </a> </h4> <p>",
+            " <a> <img> </img> </a>",
+            " </span> </p> <a> </a> <p> </p> <h2> </h2> <h4> <a> </a> </h4> <p> <span>"
+        ]
+    },
+    {
+        "dirname": 100,
+        "stats": {
+            "second_last_hash": "4ad78ff02567ef9156d9884fe9674507acb9b5d4b806db840088ebab1343aef3",
+            "last_hash": "0c68eeb6017ce31af60b4f13f5d0a411626386f50dbd617232e6c8b9f0bc4e0a",
+            "url": "http://vux-rasvjeta.hr"
+        },
+        "injected_structures": [
+            " <meta> </meta>",
+            " <link> </link> <link> </link> <link> </link> <link> </link> <link> </link> <link> </link>",
+            " <br> </br> <br> </br>"
+        ]
+    }
+]
