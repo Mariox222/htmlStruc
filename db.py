@@ -162,8 +162,8 @@ def makeHashFile():
     batch_size = 10
     sleepInterval = 2
     num_of_hash_pairs_to_get = None # ako je None, broj dokumenata je jednak docs_to - docs_from
-    docs_from = 4000 # od koje pozicije pocinje dohvacati linkove
-    docs_to = 6000 # do koje pozicije pocinje dohvacati, ako je None, trazi se do kraja kolekcije
+    docs_from = 0 # od koje pozicije pocinje dohvacati linkove
+    docs_to = 5000 # do koje pozicije pocinje dohvacati, ako je None, trazi se do kraja kolekcije
 
     json_filename = 'hash_pairs.json'
     conn_str = "mongodb://rouser:MiLaBiLaFiLa123@127.0.0.1:27017/websecradar?authSource=websecradar"
@@ -182,7 +182,7 @@ def getDocs():
     exp = Experimenter(conn_str)
     exp.getDocs(directory_name, hash_filename)
 
-def checkInjectedStructures():
+def checkInjectedStructures(removeDirs=True):
     
     directory_name = "documents"
     keepAttributes = False
@@ -195,6 +195,10 @@ def checkInjectedStructures():
     logs = list()
 
     subdirs_to_remove = list()
+
+    total_struct_size = 0
+    total_doc_size = 0
+    total_doc_count = 0
 
     for subdir in dir_path.iterdir():
         
@@ -218,7 +222,14 @@ def checkInjectedStructures():
                     with file.open("r", encoding="utf-8") as f:
                         stats = json.loads(f.read())
                         print ("stats readed")
-        
+            url = stats['url']
+            
+            lw = url.split(".")[-1]
+            if lw == 'js' or lw == 'css':
+                continue
+            
+            total_doc_count += 1
+
             old_struc = HtmlStruct()
             new_struc = HtmlStruct()
 
@@ -226,6 +237,19 @@ def checkInjectedStructures():
             new_struc.parseHtml(new_str, keepAttributes=keepAttributes)
 
             diff = old_struc.structDiff(new_struc)
+
+            old_struc_str = old_struc.getStrucAsStr()
+            new_struc_str = new_struc.getStrucAsStr()
+
+            old_struct_size = len(old_struc_str.encode('utf-8'))
+            new_struct_size = len(new_struc_str.encode('utf-8'))
+
+            old_doc_size = len(old_str.encode('utf-8'))
+            new_doc_size = len(new_str.encode('utf-8'))
+
+            total_struct_size += old_struct_size + new_struct_size
+            total_doc_size += old_doc_size + new_doc_size
+
             
             if not diff:
                 print("changes beyond simple insertions")
@@ -249,18 +273,24 @@ def checkInjectedStructures():
             }
             logs.append(log)
 
-        
+    logs.insert(0, {
+        'average_struct_file_size': total_struct_size / total_doc_count,
+        'average_doc_file_size': total_doc_size / total_doc_count,
+        'total_doc_count': total_doc_count
+    })
 
     #pprint(docs_detected)
     pprint(logs)
 
-    print("removing dirs")
-    #pprint(subdirs_to_remove)
 
-    for subdir in subdirs_to_remove:
-        for file in subdir.iterdir():
-            os.remove(file)
-        os.rmdir(subdir)
+    if removeDirs:
+        print("removing dirs")
+        #pprint(subdirs_to_remove)
+
+        for subdir in subdirs_to_remove:
+            for file in subdir.iterdir():
+                os.remove(file)
+            os.rmdir(subdir)
 
     logs_path = dir_path / "logs.json"
     
@@ -285,7 +315,7 @@ def checkInjectedStructures():
 def main():
     makeHashFile()
     getDocs()
-    checkInjectedStructures()
+    checkInjectedStructures(removeDirs=False)
 
 
 
