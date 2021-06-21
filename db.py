@@ -7,8 +7,6 @@ import json
 import os
 from htmlStruct import HtmlStruct
 
-# ssh -L 27017:127.0.0.1:27017 mbasic@161.53.65.4
-# w5dNm9Lj4zrhOJ8
 
 class Experimenter:
     def __init__(self, conn_str):
