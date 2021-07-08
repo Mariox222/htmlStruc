@@ -154,26 +154,19 @@ class Experimenter:
                 count += 1
 
 
-
-    
-def makeHashFile():
-    batch_size = 10
-    sleepInterval = 2
-    num_of_hash_pairs_to_get = None # ako je None, broj dokumenata je jednak docs_to - docs_from
-    docs_from = 0 # od koje pozicije pocinje dohvacati linkove
-    docs_to = 5000 # do koje pozicije pocinje dohvacati, ako je None, trazi se do kraja kolekcije
+""" n # ako je None, broj dokumenata je jednak docs_to - docs_from
+    docs_from # od koje pozicije pocinje dohvacati linkove
+    docs_to # do koje pozicije pocinje dohvacati, ako je None, trazi se do kraja kolekcije """
+def makeHashFile(conn_str ,batch_size=10, sleepInterval=2, n=None, docs_from=0, docs_to=5000):
 
     json_filename = 'hash_pairs.json'
-    conn_str = "mongodb://rouser:MiLaBiLaFiLa123@127.0.0.1:27017/websecradar?authSource=websecradar"
 
     exp = Experimenter(conn_str)
-    exp.getHashPairs(batch_size=batch_size, hash_pairs_n=num_of_hash_pairs_to_get, sleepInterval=sleepInterval, filename=json_filename, docs_from=docs_from, docs_to=docs_to)
+    exp.getHashPairs(batch_size=batch_size, hash_pairs_n=n, sleepInterval=sleepInterval, filename=json_filename, docs_from=docs_from, docs_to=docs_to)
 
     print ("done")
 
-def getDocs():
-    directory_name = "documents"
-    hash_filename = "hash_pairs.json"
+def getDocs(conn_str, directory_name = "documents", hash_filename = "hash_pairs.json"):
 
     conn_str = "mongodb://rouser:MiLaBiLaFiLa123@127.0.0.1:27017/websecradar?authSource=websecradar"
 
@@ -311,9 +304,12 @@ def checkInjectedStructures(removeDirs=True):
 
 
 def main():
-    makeHashFile()
-    getDocs()
-    checkInjectedStructures(removeDirs=False)
+
+    conn_str = "mongodb://rouser:MiLaBiLaFiLa123@127.0.0.1:27017/websecradar?authSource=websecradar"
+
+    makeHashFile(conn_str, batch_size=10, sleepInterval=2, n=None, docs_from=0, docs_to=500)
+    getDocs(conn_str)
+    checkInjectedStructures()
 
 
 
